@@ -88,10 +88,17 @@ h1.post-title {
   padding: 0 20px;
 }
 
+/* Most project imagery is scanned technical drawing, often under 700px wide.
+   Never upscale it: `width: auto` keeps drawings at native size and sharp,
+   while max-width still shrinks anything larger than the container. The border
+   gives white-background drawings an edge against the white page. */
 .post-hero img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
+  border: 1px solid var(--brand-rule);
   border-radius: 4px;
 }
 
@@ -191,9 +198,12 @@ h1.post-title {
 }
 
 .post-body figure img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
+  border: 1px solid var(--brand-rule);
   border-radius: 4px;
 }
 
@@ -367,10 +377,14 @@ h1.post-title {
   display: block;
 }
 
+/* `contain` rather than `cover`: cropping a technical drawing to a thumbnail
+   usually leaves an unreadable fragment. The tint gives the letterboxed area a
+   defined edge. */
 .post-card-media img {
   width: 100%;
   height: 120px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--brand-tint);
   display: block;
   border-radius: 4px;
 }
