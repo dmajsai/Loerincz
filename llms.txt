@@ -1,0 +1,55 @@
+# Loerincz Engineering
+
+> Independent structural engineering practice in Germany, providing structural
+> analysis, structural design, and static analysis documentation for
+> infrastructure and building projects.
+
+The practice is led by a Dipl. Ing. qualified civil engineer with over three
+decades of experience spanning structural planning, construction supervision,
+and project management. Work covers railway bridges, tunnels, industrial
+facilities, high-rise buildings, and residential complexes, primarily in
+Germany. All analysis and design work is carried out to the Eurocodes
+(DIN EN 1990-1998).
+
+## Pages
+
+- [Home](https://lorinczengineering.com/): Services overview, client list, and recent project case studies with per-project engineering detail.
+- [About](https://lorinczengineering.com/about.html): Education and qualifications, professional experience, independent practice, software proficiency, standards, and languages.
+
+## Services
+
+- [Structural Analysis](https://lorinczengineering.com/#services): In-depth FEM simulation and load analysis predicting how structures respond to environmental forces, loads, and other stressors. Identifies structural weaknesses and failure points early in the design process and recommends reinforcement and optimization.
+- [Structural Design](https://lorinczengineering.com/#services): Detailed design plans and specifications for new construction and refurbishment, integrating sustainable and cost-effective materials, with drawings and specifications ready for construction.
+- [Static Analysis Documents and Planning](https://lorinczengineering.com/#services): Static analysis reports for regulatory approval, including cross-sectional drawings, plan overviews, and FEM structural models, plus documentation for client and regulatory review.
+
+## Expertise
+
+- Structural analysis and FEM simulation
+- Prestressed concrete structures
+- Steel construction
+- Railway bridge design and refurbishment
+- Tunnel and infrastructure structural planning, including construction pits, diaphragm walls, and pile walls
+- High-rise building static analysis and construction supervision
+- Standards: DIN EN 1990-1998 (Eurocodes)
+
+## Software
+
+FEM analysis: SOFiSTiK, Dlubal, GGU, RFEM.
+CAD: Nemetschek, AutoCAD, Archicad.
+Other: Tekla, Mathcad, PCAE, SCIA.
+
+## Clients
+
+Deutsche Bahn (DB German Rail), Hochtief, Hays AG, Zublin, Wayss & Freytag,
+CG Gruppe, GBM, CEH, UVATERV.
+
+## Languages
+
+German, Hungarian, and Romanian at high proficiency; English, French, and
+Italian at medium proficiency.
+
+## Contact
+
+- Location: Germany
+- [WhatsApp](https://wa.me/491607964839)
+- Email address and phone number are published on the [contact section](https://lorinczengineering.com/#contact) behind a click-to-reveal control, and are intentionally not listed here.
