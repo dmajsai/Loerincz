@@ -1,0 +1,79 @@
+name: Build check
+
+# Validates the Jekyll build in the same environment GitHub Pages uses, on
+# branches and pull requests, so a broken template never reaches main. This
+# workflow only builds; it never deploys. Pages continues to deploy from main
+# through its own legacy build.
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Static pages must pass through byte-identical
+        run: |
+          set -e
+          fail=0
+          for f in index.html about.html 404.html robots.txt llms.txt; do
+            if [ ! -f "_site/$f" ]; then
+              echo "MISSING from build output: $f"; fail=1; continue
+            fi
+            if cmp -s "$f" "_site/$f"; then
+              echo "OK  unchanged: $f"
+            else
+              echo "CHANGED by Jekyll: $f"
+              diff <(head -40 "$f") <(head -40 "_site/$f") || true
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Unicode NFD image filenames must survive the build
+        run: |
+          set -e
+          n=$(find _site/images -name '*Hackerbr*' | wc -l | tr -d ' ')
+          echo "Hackerbrucke files in output: $n (expected 6)"
+          [ "$n" -eq 6 ]
+
+      - name: Generated sitemap must include static pages and posts
+        run: |
+          set -e
+          test -f _site/sitemap.xml || { echo "no sitemap.xml generated"; exit 1; }
+          echo "--- generated sitemap ---"
+          cat _site/sitemap.xml
+          echo "--- entries: $(grep -c '<loc>' _site/sitemap.xml) ---"
+          # Posts must be listed, otherwise the plugin is not doing its job.
+          grep -q "/blog/" _site/sitemap.xml || { echo "FAIL: no blog URLs in sitemap"; exit 1; }
+          # Static pages are informational: jekyll-sitemap's handling of
+          # front-matter-less files varies, and the fallback is a hand-written file.
+          for u in "about" "index"; do
+            grep -q "$u" _site/sitemap.xml && echo "OK   static page listed: $u" \
+              || echo "NOTE static page not listed: $u (may need manual sitemap)"
+          done
+
+      - name: Blog output must exist and carry structured data
+        run: |
+          set -e
+          test -f _site/blog/index.html || { echo "no blog index"; exit 1; }
+          test -f _site/blog/feed.xml   || { echo "no RSS feed"; exit 1; }
+          posts=$(find _site/blog -mindepth 2 -name index.html | wc -l | tr -d ' ')
+          echo "rendered posts: $posts"
+          [ "$posts" -ge 4 ]
+          grep -rq '"@type": "BlogPosting"' _site/blog || { echo "no BlogPosting schema"; exit 1; }
+          echo "OK  BlogPosting schema present"

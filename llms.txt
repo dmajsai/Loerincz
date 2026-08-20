@@ -15,6 +15,8 @@ Germany. All analysis and design work is carried out to the Eurocodes
 
 - [Home](https://lorinczengineering.com/): Services overview, client list, and recent project case studies with per-project engineering detail.
 - [About](https://lorinczengineering.com/about.html): Education and qualifications, professional experience, independent practice, software proficiency, standards, and languages.
+- [Engineering case studies](https://lorinczengineering.com/blog/): Worked examples from our projects, covering how each structure was analysed, what governed the design, and the standards and software applied.
+- [Railway bridge engineering](https://lorinczengineering.com/blog/railway-bridges/): Case studies on railway bridge analysis, design and refurbishment for DB German Rail.
 
 ## Services
 

@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="post-container">
+  <header class="blog-index-header">
+    <nav class="post-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <a href="/blog/">Blog</a> <span aria-hidden="true">/</span>
+      <span>{{ page.title }}</span>
+    </nav>
+    <h1 class="post-title">{{ page.heading | default: page.title }}</h1>
+    {%- if page.lede %}
+    <p class="post-lede">{{ page.lede }}</p>
+    {%- endif %}
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  {%- assign posts = site.posts | where: "cluster", page.cluster -%}
+  {%- if posts.size > 0 %}
+  <h2 class="post-related-title">Case studies in this area</h2>
+  <ul class="post-list">
+    {%- for post in posts %}
+    <li class="post-card">
+      {%- if post.image %}
+      <a href="{{ post.url }}" class="post-card-media" tabindex="-1" aria-hidden="true">
+        <img src="{{ post.image }}" alt="" loading="lazy">
+      </a>
+      {%- endif %}
+      <div class="post-card-body">
+        <h3 class="post-card-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {%- if post.description %}
+        <p class="post-card-desc">{{ post.description }}</p>
+        {%- endif %}
+        <p class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+          {%- if post.client %} <span aria-hidden="true">·</span> {{ post.client }}{% endif %}
+        </p>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+
+  <section class="post-cta">
+    <h2>Discuss a similar project</h2>
+    <p>If you have a structure that needs analysis, design, or static analysis documentation for approval, we are happy
+      to look at it.</p>
+    <p>
+      <a href="/#contact" class="button-primary w-button">Get in touch</a>
+      <a href="/#services" class="post-cta-secondary">See our services</a>
+    </p>
+  </section>
+</div>

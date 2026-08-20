@@ -1,0 +1,47 @@
+# Jekyll configuration for lorinczengineering.com
+#
+# GitHub Pages already ran Jekyll on this repo with defaults, so enabling it
+# properly adds no new build tooling. index.html, about.html and 404.html carry
+# no YAML front matter, which means Jekyll copies them through untouched. Only
+# the blog uses layouts.
+
+title: Loerincz Engineering
+description: >-
+  Independent structural engineering practice in Germany. Structural analysis,
+  structural design and static analysis documents for railway bridges, tunnels,
+  industrial and high-rise buildings.
+url: "https://lorinczengineering.com"
+baseurl: ""
+lang: en
+
+# Clean article URLs, e.g. /blog/composite-steel-concrete-rail-bridge/
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: /blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      cluster: general
+
+# Set once you have the token from Search Console. Left empty so no tag renders.
+google_site_verification: ""
+
+# Cloudflare Web Analytics beacon token. Cookieless, so no consent banner is
+# required. Left empty so no third-party script loads until you supply it.
+cloudflare_analytics_token: ""
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .DS_Store
