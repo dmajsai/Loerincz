@@ -1,0 +1,57 @@
+/* ==========================================================================
+   custom.css — hand-authored overrides layered on top of the Webflow export.
+   Kept in a separate file so a future Webflow re-export does not clobber it.
+   ========================================================================== */
+
+/* The hero headings were promoted from h3/h4 (index) and h2 (about) to h1/h2
+   so each page has a single, correct document outline. Webflow sizes headings
+   off the tag rather than the class, so pin the original sizes here to keep
+   the rendered design identical. */
+h1.heading {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h2.heading-5 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h1.heading-11 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+/* Intrinsic width/height attributes are now set on the hero imagery so the
+   browser can reserve space and avoid layout shift. Webflow's base img rule
+   caps width at 100% without releasing height, so opt these back into auto. */
+.shadow-two,
+.testimonial-image-four {
+  height: auto;
+}
+
+/* Social destinations that are not live yet (Twitter, LinkedIn, Facebook) are
+   rendered as greyed-out, non-interactive spans rather than dead "#" links or
+   links to a bare social-network homepage. Only WhatsApp is a real
+   destination. Restyle these here if the profiles later go live. */
+.footer-link.is-disabled,
+.social-link.is-disabled {
+  pointer-events: none;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.footer-link.is-disabled {
+  color: #b8b8b8;
+  opacity: 0.45;
+  text-decoration: none;
+}
+
+.social-link.is-disabled {
+  opacity: 0.35;
+}
+
+.social-link.is-disabled .social-icon {
+  filter: grayscale(100%);
+}
