@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <div class="post-container">
+      <nav class="post-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span>
+        <a href="/blog/">Blog</a> <span aria-hidden="true">/</span>
+        <span>{{ page.title }}</span>
+      </nav>
+      {%- if page.cluster_name %}
+      <p class="post-eyebrow">{{ page.cluster_name }}</p>
+      {%- endif %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      {%- if page.description %}
+      <p class="post-lede">{{ page.description }}</p>
+      {%- endif %}
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      </p>
+    </div>
+  </header>
+
+  {%- if page.image %}
+  <figure class="post-hero">
+    <img src="{{ page.image }}" alt="{{ page.image_alt | default: page.title | escape }}" loading="eager"
+      fetchpriority="high">
+    {%- if page.image_caption %}
+    <figcaption>{{ page.image_caption }}</figcaption>
+    {%- endif %}
+  </figure>
+  {%- endif %}
+
+  <div class="post-container">
+    {%- if page.client or page.scope or page.structure or page.services %}
+    <aside class="fact-box" aria-label="Project summary">
+      <h2 class="fact-box-title">Project summary</h2>
+      <dl>
+        {%- if page.client %}<dt>Client</dt><dd>{{ page.client }}</dd>{% endif %}
+        {%- if page.scope %}<dt>Scope</dt><dd>{{ page.scope }}</dd>{% endif %}
+        {%- if page.structure %}<dt>Structure</dt><dd>{{ page.structure }}</dd>{% endif %}
+        {%- if page.location %}<dt>Location</dt><dd>{{ page.location }}</dd>{% endif %}
+        {%- if page.services %}<dt>Services</dt><dd>{{ page.services }}</dd>{% endif %}
+      </dl>
+    </aside>
+    {%- endif %}
+
+    <div class="post-body">
+      {{ content }}
+    </div>
+
+    {%- assign siblings = site.posts | where: "cluster", page.cluster -%}
+    {%- assign sibling_count = 0 -%}
+    {%- for p in siblings -%}{%- unless p.url == page.url -%}{%- assign sibling_count = sibling_count | plus: 1 -%}{%- endunless -%}{%- endfor -%}
+    {%- if sibling_count > 0 %}
+    <section class="post-related" aria-label="Related case studies">
+      <h2 class="post-related-title">Related work</h2>
+      <ul class="post-related-list">
+        {%- for p in siblings limit: 4 -%}
+        {%- unless p.url == page.url %}
+        <li>
+          <a href="{{ p.url }}">{{ p.title }}</a>
+          {%- if p.description %}<span>{{ p.description | truncate: 110 }}</span>{% endif %}
+        </li>
+        {%- endunless -%}
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endif %}
+
+    <section class="post-cta">
+      <h2>Discuss a similar project</h2>
+      <p>If you have a structure that needs analysis, design, or static analysis documentation for approval, we are
+        happy to look at it.</p>
+      <p>
+        <a href="/#contact" class="button-primary w-button">Get in touch</a>
+        <a href="/#services" class="post-cta-secondary">See our services</a>
+      </p>
+    </section>
+  </div>
+</article>

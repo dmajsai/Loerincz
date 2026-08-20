@@ -1,0 +1,443 @@
+/* ==========================================================================
+   blog.css — article and listing styles for the Jekyll-rendered blog.
+   Layered on top of the Webflow export; brand tokens taken from
+   portfolio-site-16272b.webflow.css (#13233a navy, #0050bd blue, #e4ebf3 tint).
+   ========================================================================== */
+
+:root {
+  --brand-navy: #13233a;
+  --brand-blue: #0050bd;
+  --brand-tint: #e4ebf3;
+  --brand-muted: #71767d;
+  --brand-rule: #d6dee8;
+}
+
+/* --- shared container ---------------------------------------------------- */
+.post-container {
+  width: 100%;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* --- header -------------------------------------------------------------- */
+.post-header {
+  padding-top: 24px;
+}
+
+.post-breadcrumb {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--brand-muted);
+  margin-bottom: 20px;
+}
+
+.post-breadcrumb a {
+  color: var(--brand-muted);
+  text-decoration: none;
+}
+
+.post-breadcrumb a:hover {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
+.post-breadcrumb span[aria-hidden] {
+  margin: 0 6px;
+  opacity: 0.6;
+}
+
+.post-eyebrow {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--brand-blue);
+  margin: 0 0 10px;
+}
+
+h1.post-title {
+  font-size: 38px;
+  line-height: 46px;
+  color: var(--brand-navy);
+  margin: 0 0 16px;
+}
+
+.post-lede {
+  font-size: 18px;
+  line-height: 28px;
+  color: #3d4753;
+  margin: 0 0 16px;
+}
+
+.post-meta {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--brand-muted);
+  margin: 0;
+}
+
+/* --- hero image ---------------------------------------------------------- */
+.post-hero {
+  max-width: 1140px;
+  margin: 28px auto 0;
+  padding: 0 20px;
+}
+
+.post-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.post-hero figcaption {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--brand-muted);
+  margin-top: 10px;
+}
+
+/* --- project summary box ------------------------------------------------- */
+.fact-box {
+  background-color: var(--brand-tint);
+  border-left: 4px solid var(--brand-blue);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin: 36px 0 8px;
+}
+
+.fact-box-title {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+  margin: 0 0 14px;
+}
+
+.fact-box dl {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px 16px;
+  margin: 0;
+}
+
+.fact-box dt {
+  font-weight: bold;
+  color: var(--brand-navy);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.fact-box dd {
+  margin: 0;
+  color: #3d4753;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* --- article body -------------------------------------------------------- */
+.post-body {
+  font-size: 16px;
+  line-height: 26px;
+  color: #2c3642;
+  padding-top: 12px;
+}
+
+.post-body p {
+  margin: 0 0 20px;
+}
+
+.post-body h2 {
+  font-size: 26px;
+  line-height: 32px;
+  color: var(--brand-navy);
+  margin: 40px 0 14px;
+}
+
+.post-body h3 {
+  font-size: 19px;
+  line-height: 26px;
+  color: var(--brand-navy);
+  margin: 30px 0 10px;
+}
+
+.post-body ul,
+.post-body ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.post-body li {
+  margin-bottom: 8px;
+}
+
+.post-body a {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
+.post-body strong {
+  color: var(--brand-navy);
+}
+
+.post-body figure {
+  margin: 28px 0;
+}
+
+.post-body figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.post-body figcaption {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--brand-muted);
+  margin-top: 8px;
+}
+
+.post-body blockquote {
+  margin: 28px 0;
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--brand-rule);
+  color: #3d4753;
+  font-style: italic;
+}
+
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+.post-body th,
+.post-body td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--brand-rule);
+}
+
+.post-body th {
+  color: var(--brand-navy);
+  border-bottom-width: 2px;
+}
+
+/* Wide content must scroll inside itself, never the page. */
+.post-body .table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --- related ------------------------------------------------------------- */
+.post-related {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--brand-rule);
+}
+
+.post-related-title {
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--brand-navy);
+  margin: 0 0 16px;
+}
+
+.post-related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-related-list li {
+  margin-bottom: 14px;
+}
+
+.post-related-list a {
+  color: var(--brand-blue);
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+.post-related-list a:hover {
+  text-decoration: underline;
+}
+
+.post-related-list span {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--brand-muted);
+}
+
+/* --- call to action ------------------------------------------------------ */
+.post-cta {
+  margin: 48px 0 64px;
+  padding: 28px 24px;
+  background-color: var(--brand-navy);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.post-cta h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #fff;
+}
+
+.post-cta p {
+  margin: 0 0 16px;
+  color: #c9d3e0;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.post-cta p:last-child {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.post-cta-secondary {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* --- listing ------------------------------------------------------------- */
+.blog-index-header {
+  padding-top: 24px;
+  margin-bottom: 8px;
+}
+
+.cluster-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 8px;
+}
+
+.cluster-chip {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid var(--brand-rule);
+  border-radius: 100px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--brand-navy);
+  text-decoration: none;
+}
+
+.cluster-chip:hover {
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+.post-list {
+  list-style: none;
+  margin: 28px 0 56px;
+  padding: 0;
+}
+
+.post-card {
+  display: flex;
+  gap: 20px;
+  padding: 22px 0;
+  border-top: 1px solid var(--brand-rule);
+}
+
+.post-card:last-child {
+  border-bottom: 1px solid var(--brand-rule);
+}
+
+.post-card-media {
+  flex: 0 0 180px;
+  display: block;
+}
+
+.post-card-media img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+.post-card-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.post-card-title {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0 0 8px;
+}
+
+.post-card-title a {
+  color: var(--brand-navy);
+  text-decoration: none;
+}
+
+.post-card-title a:hover {
+  color: var(--brand-blue);
+}
+
+.post-card-desc {
+  font-size: 15px;
+  line-height: 23px;
+  color: #3d4753;
+  margin: 0 0 8px;
+}
+
+/* --- responsive ---------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  h1.post-title {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .post-lede {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .fact-box dl {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .fact-box dd {
+    margin-bottom: 10px;
+  }
+
+  .post-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .post-card-media {
+    flex-basis: auto;
+  }
+
+  .post-card-media img {
+    height: 180px;
+  }
+
+  .post-body h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

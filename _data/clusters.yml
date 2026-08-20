@@ -1,0 +1,10 @@
+# Topic clusters shown as chips on the blog index, and matched against each
+# post's `cluster` field to build hub pages and related links.
+#
+# Only list a cluster here once its hub page is published and has case studies
+# behind it. The industrial-commercial and residential hubs are written and sit
+# in blog/ with `published: false`, waiting on their case studies. Add them back
+# here at the same time you flip that flag, otherwise these chips 404.
+- name: Railway bridges
+  slug: railway-bridges
+  url: /blog/railway-bridges/
