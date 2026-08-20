@@ -24,8 +24,6 @@ plugins:
 feed:
   path: /blog/feed.xml
 
-collections_dir: .
-
 defaults:
   - scope:
       path: ""
