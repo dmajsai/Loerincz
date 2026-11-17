@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<main class="ref-container">
+  <header class="ref-header">
+    <nav class="post-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span>
+      <span>Projects</span>
+    </nav>
+    <h1 class="post-title">Project references 2019-2026</h1>
+    <p class="post-lede">Railway bridges and station structures for DB and its partners, steel structures for industrial plants, and concrete buildings. Each entry lists the client, the scope of our work and drawings from the project.</p>
+  </header>
+
+  {%- assign railway_count = site.data.references | where: "sector", "railway" | size -%}
+  {%- assign industrial_count = site.data.references | where: "sector", "industrial" | size -%}
+  {%- assign buildings_count = site.data.references | where: "sector", "buildings" | size -%}
+  {%- assign hydraulic_count = site.data.references | where: "sector", "hydraulic" | size -%}
+  <nav class="ref-filters" aria-label="Project sectors" hidden>
+    <button class="ref-filter" type="button" data-filter="all" aria-pressed="true" hidden>All <span>{{ site.data.references.size }}</span></button>
+    <button class="ref-filter" type="button" data-filter="railway" aria-pressed="false" hidden>Railway <span>{{ railway_count }}</span></button>
+    <button class="ref-filter" type="button" data-filter="industrial" aria-pressed="false" hidden>Industrial plants <span>{{ industrial_count }}</span></button>
+    <button class="ref-filter" type="button" data-filter="buildings" aria-pressed="false" hidden>Buildings <span>{{ buildings_count }}</span></button>
+    <button class="ref-filter" type="button" data-filter="hydraulic" aria-pressed="false" hidden>Hydraulic steelwork <span>{{ hydraulic_count }}</span></button>
+  </nav>
+
+  {%- assign years = site.data.references | map: "year" | uniq | sort | reverse -%}
+  <div class="ref-list">
+    {%- for year in years -%}
+    {%- assign year_references = site.data.references | where: "year", year -%}
+    <section class="ref-year">
+      <h2 class="ref-year-title">{{ year }}</h2>
+      {%- for reference in year_references -%}
+      <article class="ref-item" id="{{ reference.id }}" data-sector="{{ reference.sector }}">
+        {%- case reference.sector -%}
+          {%- when "railway" -%}{%- assign sector_label = "Railway" -%}
+          {%- when "industrial" -%}{%- assign sector_label = "Industrial plants" -%}
+          {%- when "buildings" -%}{%- assign sector_label = "Buildings" -%}
+          {%- when "hydraulic" -%}{%- assign sector_label = "Hydraulic steelwork" -%}
+        {%- endcase %}
+        <p class="ref-eyebrow">{{ reference.year }} · {{ sector_label }}</p>
+        <h3 class="ref-title">{{ reference.title | escape }}</h3>
+        {%- if reference.client or reference.location %}
+        <p class="ref-meta">{%- if reference.client %}{{ reference.client | escape }}{% endif %}{% if reference.client and reference.location %} · {% endif %}{% if reference.location %}{{ reference.location | escape }}{% endif %}</p>
+        {%- endif %}
+        <p class="ref-summary">{{ reference.summary | escape }}</p>
+        {%- if reference.services %}
+        <ul class="ref-services" aria-label="Services">
+          {%- for service in reference.services %}<li>{{ service | escape }}</li>{% endfor %}
+        </ul>
+        {%- endif %}
+        {%- if reference.images and reference.images.size > 0 %}
+        <div class="ref-thumbs">
+          {%- for reference_image in reference.images -%}
+          {%- assign image_dimensions = site.data.reference_images[reference_image.file] -%}
+          <a class="ref-thumb" href="/images/references/{{ reference_image.file }}.webp" data-width="{{ image_dimensions.w }}" data-height="{{ image_dimensions.h }}">
+            <img src="/images/references/{{ reference_image.file }}-thumb.webp" width="{{ image_dimensions.tw }}" height="{{ image_dimensions.th }}" loading="lazy" alt="{{ reference_image.alt | escape }}">
+          </a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- if reference.case_study %}
+        <p class="ref-case-study"><a href="{{ reference.case_study | escape }}">Read the case study</a></p>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </section>
+    {%- endfor %}
+  </div>
+
+  <section class="post-cta">
+    <h2>Discuss a similar project</h2>
+    <p>If you have a structure that needs analysis, design, or static analysis documentation for approval, we are
+      happy to look at it.</p>
+    <p>
+      <a href="/#contact" class="button-primary w-button">Get in touch</a>
+      <a href="/#services" class="post-cta-secondary">See our services</a>
+    </p>
+  </section>
+</main>
+
+<dialog class="ref-lightbox" aria-label="Project image">
+  <button class="ref-lightbox-close" type="button" aria-label="Close image">Close image</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+</dialog>
+<script src="/js/references.js" defer></script>

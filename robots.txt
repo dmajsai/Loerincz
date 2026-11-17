@@ -1,5 +1,5 @@
-# https://lorinczengineering.com/
+# https://loerinczengineering.de/
 User-agent: *
 Allow: /
 
-Sitemap: https://lorinczengineering.com/sitemap.xml
+Sitemap: https://loerinczengineering.de/sitemap.xml

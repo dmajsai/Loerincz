@@ -1,0 +1,243 @@
+.ref-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 0;
+  box-sizing: border-box;
+}
+
+.ref-header {
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+
+.ref-title {
+  color: var(--brand-navy);
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.ref-eyebrow {
+  color: var(--brand-blue);
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.ref-meta {
+  color: var(--brand-muted);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+}
+
+.ref-summary {
+  color: #2c3642;
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0 0 14px;
+  overflow-wrap: anywhere;
+}
+
+.ref-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 32px;
+}
+
+.ref-filter {
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid var(--brand-rule);
+  border-radius: 20px;
+  background: #fff;
+  color: var(--brand-navy);
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ref-filter span {
+  color: var(--brand-muted);
+  margin-left: 4px;
+}
+
+.ref-filter[aria-pressed="true"] {
+  border-color: var(--brand-blue);
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+.ref-filter[aria-pressed="true"] span {
+  color: #fff;
+}
+
+.ref-filter:hover {
+  border-color: var(--brand-blue);
+}
+
+.ref-filter:focus-visible,
+.ref-thumb:focus-visible,
+.ref-case-study a:focus-visible,
+.ref-lightbox-close:focus-visible {
+  outline: 3px solid #f0a202;
+  outline-offset: 3px;
+}
+
+.ref-year {
+  margin: 0 0 40px;
+}
+
+.ref-year-title {
+  color: var(--brand-navy);
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0 0 8px;
+}
+
+.ref-item {
+  min-width: 0;
+  padding: 22px 0 26px;
+  border-top: 1px solid var(--brand-rule);
+}
+
+.ref-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.ref-services li {
+  padding: 4px 9px;
+  border-radius: 3px;
+  background: var(--brand-tint);
+  color: var(--brand-navy);
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.ref-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ref-thumb {
+  display: flex;
+  flex: 0 1 180px;
+  width: 180px;
+  height: 120px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--brand-rule);
+  border-radius: 4px;
+  background: var(--brand-tint);
+  box-sizing: border-box;
+}
+
+.ref-thumb img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.ref-case-study {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ref-case-study a {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
+.ref-lightbox {
+  position: fixed;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  padding: 42px 16px 16px;
+  border: 1px solid var(--brand-rule);
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+  color: var(--brand-navy);
+}
+
+.ref-lightbox::backdrop {
+  background: rgba(19, 35, 58, 0.82);
+}
+
+.ref-lightbox figure {
+  margin: 0;
+}
+
+.ref-lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 68px);
+  max-height: calc(100vh - 112px);
+  object-fit: contain;
+}
+
+.ref-lightbox figcaption {
+  margin-top: 10px;
+  color: var(--brand-muted);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.ref-lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-height: 32px;
+  padding: 5px 8px;
+  border: 1px solid var(--brand-rule);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--brand-navy);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.ref-item[hidden],
+.ref-year[hidden],
+.ref-filter[hidden],
+.ref-filters[hidden] {
+  display: none !important;
+}
+
+@media screen and (max-width: 567px) {
+  .ref-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .ref-filter {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ref-thumb {
+    flex-basis: 180px;
+  }
+}

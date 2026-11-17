@@ -6,33 +6,37 @@
 
 The practice is led by a Dipl. Ing. qualified civil engineer with over three
 decades of experience spanning structural planning, construction supervision,
-and project management. Work covers railway bridges, tunnels, industrial
-facilities, high-rise buildings, and residential complexes, primarily in
-Germany. All analysis and design work is carried out to the Eurocodes
-(DIN EN 1990-1998).
+and project management. Work covers railway bridges and station structures,
+steel structures and pipe racks for industrial and chemical plants, tunnels,
+high-rise buildings, and residential complexes, primarily in Germany. Analysis
+and design follow the Eurocodes (DIN EN 1990-1998) and, where required, the
+Swiss SIA standards.
 
 ## Pages
 
-- [Home](https://lorinczengineering.com/): Services overview, client list, and recent project case studies with per-project engineering detail.
-- [About](https://lorinczengineering.com/about.html): Education and qualifications, professional experience, independent practice, software proficiency, standards, and languages.
-- [Engineering case studies](https://lorinczengineering.com/blog/): Worked examples from our projects, covering how each structure was analysed, what governed the design, and the standards and software applied.
-- [Railway bridge engineering](https://lorinczengineering.com/blog/railway-bridges/): Case studies on railway bridge analysis, design and refurbishment for DB German Rail.
+- [Home](https://loerinczengineering.de/): Services overview, client list, and recent project case studies with per-project engineering detail.
+- [Project references 2019-2026](https://loerinczengineering.de/projects/): Every project from 2019 to 2026 with year, client, scope of work, and drawings or analysis models. Covers railway trough bridges, integral bridges, filler beam bridges, station overpasses, pipe racks, industrial steel structures, and concrete buildings.
+- [About](https://loerinczengineering.de/about.html): Education and qualifications, professional experience, independent practice, software proficiency, standards, and languages.
+- [Engineering case studies](https://loerinczengineering.de/blog/): Worked examples from our projects, covering how each structure was analysed, what governed the design, and the standards and software applied.
+- [Railway bridge engineering](https://loerinczengineering.de/blog/railway-bridges/): Case studies on railway bridge analysis, design and refurbishment for DB German Rail.
 
 ## Services
 
-- [Structural Analysis](https://lorinczengineering.com/#services): In-depth FEM simulation and load analysis predicting how structures respond to environmental forces, loads, and other stressors. Identifies structural weaknesses and failure points early in the design process and recommends reinforcement and optimization.
-- [Structural Design](https://lorinczengineering.com/#services): Detailed design plans and specifications for new construction and refurbishment, integrating sustainable and cost-effective materials, with drawings and specifications ready for construction.
-- [Static Analysis Documents and Planning](https://lorinczengineering.com/#services): Static analysis reports for regulatory approval, including cross-sectional drawings, plan overviews, and FEM structural models, plus documentation for client and regulatory review.
+- [Structural Analysis](https://loerinczengineering.de/#services): In-depth FEM simulation and load analysis predicting how structures respond to environmental forces, loads, and other stressors. Identifies structural weaknesses and failure points early in the design process and recommends reinforcement and optimization.
+- [Structural Design](https://loerinczengineering.de/#services): Detailed design plans and specifications for new construction and refurbishment, integrating sustainable and cost-effective materials, with drawings and specifications ready for construction.
+- [Static Analysis Documents and Planning](https://loerinczengineering.de/#services): Static analysis reports for regulatory approval, including cross-sectional drawings, plan overviews, and FEM structural models, plus documentation for client and regulatory review.
 
 ## Expertise
 
 - Structural analysis and FEM simulation
 - Prestressed concrete structures
-- Steel construction
-- Railway bridge design and refurbishment
+- Steel construction, including steel trough bridges and pedestrian bridges
+- Pipe bridges, pipe racks, stair towers, silos and chimneys for industrial plants
+- Reassessment, strengthening and monitoring of existing structures
+- Railway bridge design and refurbishment, including integral and filler beam (WiB) bridges
 - Tunnel and infrastructure structural planning, including construction pits, diaphragm walls, and pile walls
 - High-rise building static analysis and construction supervision
-- Standards: DIN EN 1990-1998 (Eurocodes)
+- Standards: DIN EN 1990-1998 (Eurocodes), SIA
 
 ## Software
 
@@ -42,8 +46,8 @@ Other: Tekla, Mathcad, PCAE, SCIA.
 
 ## Clients
 
-Deutsche Bahn (DB German Rail), Hochtief, Hays AG, Zublin, Wayss & Freytag,
-CG Gruppe, GBM, CEH, UVATERV.
+Deutsche Bahn (DB German Rail), Triplan, WSP, Hochtief, Hays AG, Zublin,
+Wayss & Freytag, CG Gruppe, GBM, CEH, UVATERV.
 
 ## Languages
 
@@ -54,4 +58,4 @@ Italian at medium proficiency.
 
 - Location: Germany
 - [WhatsApp](https://wa.me/491607964839)
-- Email address and phone number are published on the [contact section](https://lorinczengineering.com/#contact) behind a click-to-reveal control, and are intentionally not listed here.
+- Email address and phone number are published on the [contact section](https://loerinczengineering.de/#contact) behind a click-to-reveal control, and are intentionally not listed here.

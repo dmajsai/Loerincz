@@ -1,0 +1,255 @@
+cologne-steel-trough-bridge-1:
+  w: 525
+  h: 240
+  tw: 525
+  th: 240
+cologne-steel-trough-bridge-2:
+  w: 369
+  h: 363
+  tw: 369
+  th: 363
+cologne-steel-trough-bridge-3:
+  w: 474
+  h: 265
+  tw: 474
+  th: 265
+stuttgart-21-integral-crossing-structures-1:
+  w: 785
+  h: 636
+  tw: 640
+  th: 519
+eddersheim-pedestrian-overpass-1:
+  w: 1400
+  h: 828
+  tw: 640
+  th: 379
+eddersheim-pedestrian-overpass-2:
+  w: 948
+  h: 781
+  tw: 640
+  th: 528
+geretshausen-pedestrian-overpass-1:
+  w: 917
+  h: 553
+  tw: 640
+  th: 386
+geretshausen-pedestrian-overpass-2:
+  w: 918
+  h: 882
+  tw: 640
+  th: 615
+neustadt-filler-beam-bridges-1:
+  w: 1023
+  h: 411
+  tw: 640
+  th: 258
+bingen-platform-refurbishment-1:
+  w: 1400
+  h: 491
+  tw: 640
+  th: 225
+bingen-platform-refurbishment-2:
+  w: 1252
+  h: 541
+  tw: 640
+  th: 277
+industrial-pipe-racks-strengthening-1:
+  w: 565
+  h: 547
+  tw: 565
+  th: 547
+industrial-pipeline-bridge-1:
+  w: 1120
+  h: 620
+  tw: 640
+  th: 355
+industrial-pipeline-bridge-2:
+  w: 1040
+  h: 694
+  tw: 640
+  th: 428
+shell-industrial-bridge-1:
+  w: 1368
+  h: 557
+  tw: 640
+  th: 261
+shell-industrial-bridge-2:
+  w: 551
+  h: 344
+  tw: 551
+  th: 344
+industrial-pipeline-secondary-steel-1:
+  w: 544
+  h: 792
+  tw: 544
+  th: 792
+industrial-pipeline-secondary-steel-2:
+  w: 657
+  h: 759
+  tw: 640
+  th: 740
+chemical-plant-steel-hall-crane-1:
+  w: 909
+  h: 578
+  tw: 640
+  th: 407
+chemical-plant-steel-hall-crane-2:
+  w: 768
+  h: 493
+  tw: 640
+  th: 411
+hoechst-chemical-plant-reassessment-1:
+  w: 501
+  h: 300
+  tw: 501
+  th: 300
+industrial-stair-towers-1:
+  w: 933
+  h: 518
+  tw: 640
+  th: 356
+steel-silos-foundations-1:
+  w: 542
+  h: 325
+  tw: 542
+  th: 325
+steel-silos-foundations-2:
+  w: 557
+  h: 765
+  tw: 557
+  th: 765
+steel-silos-foundations-3:
+  w: 751
+  h: 725
+  tw: 640
+  th: 618
+vessel-supports-1:
+  w: 569
+  h: 551
+  tw: 569
+  th: 551
+vessel-supports-2:
+  w: 375
+  h: 451
+  tw: 375
+  th: 451
+munich-station-pedestrian-bridge-1:
+  w: 896
+  h: 432
+  tw: 640
+  th: 309
+munich-station-pedestrian-bridge-2:
+  w: 970
+  h: 575
+  tw: 640
+  th: 380
+steel-trough-rail-bridge-60m-1:
+  w: 711
+  h: 390
+  tw: 640
+  th: 352
+steel-trough-rail-bridge-60m-2:
+  w: 696
+  h: 398
+  tw: 640
+  th: 366
+steel-trough-rail-bridge-60m-3:
+  w: 621
+  h: 420
+  tw: 621
+  th: 420
+rail-trough-bridge-sofistik-1:
+  w: 548
+  h: 618
+  tw: 548
+  th: 618
+rail-trough-bridge-sofistik-2:
+  w: 543
+  h: 391
+  tw: 543
+  th: 391
+isar-composite-rail-bridge-1:
+  w: 951
+  h: 581
+  tw: 640
+  th: 391
+isar-composite-rail-bridge-2:
+  w: 738
+  h: 288
+  tw: 640
+  th: 250
+isar-composite-rail-bridge-3:
+  w: 1008
+  h: 495
+  tw: 640
+  th: 315
+prestressed-industrial-building-1:
+  w: 682
+  h: 429
+  tw: 640
+  th: 403
+prestressed-industrial-building-2:
+  w: 621
+  h: 423
+  tw: 621
+  th: 423
+precast-office-building-1:
+  w: 636
+  h: 540
+  tw: 636
+  th: 540
+precast-office-building-2:
+  w: 663
+  h: 228
+  tw: 640
+  th: 221
+steel-pedestrian-bridge-db-tracks-1:
+  w: 1400
+  h: 668
+  tw: 640
+  th: 305
+steel-pedestrian-bridge-db-tracks-2:
+  w: 830
+  h: 696
+  tw: 640
+  th: 537
+steel-pedestrian-bridge-db-tracks-3:
+  w: 284
+  h: 352
+  tw: 284
+  th: 352
+rail-bridge-refurbishment-new-access-1:
+  w: 590
+  h: 530
+  tw: 590
+  th: 530
+rail-bridge-refurbishment-new-access-2:
+  w: 589
+  h: 511
+  tw: 589
+  th: 511
+avl-production-hall-stuttgart-1:
+  w: 523
+  h: 207
+  tw: 523
+  th: 207
+avl-production-hall-stuttgart-2:
+  w: 887
+  h: 569
+  tw: 640
+  th: 411
+hochtief-port-gate-1:
+  w: 722
+  h: 589
+  tw: 640
+  th: 523
+hochtief-port-gate-2:
+  w: 522
+  h: 689
+  tw: 522
+  th: 689
+hochtief-port-gate-3:
+  w: 866
+  h: 429
+  tw: 640
+  th: 318
