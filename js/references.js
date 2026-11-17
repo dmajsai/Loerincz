@@ -46,14 +46,24 @@
     });
   });
 
-  closeButton.addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
-  });
-  dialog.addEventListener("close", () => {
-    if (trigger && trigger.isConnected) trigger.focus();
+  // Runs from the close button and backdrop directly, and from the "close"
+  // event for Esc. Idempotent, so whichever comes first does the work.
+  const restore = () => {
+    if (!trigger) return;
+    const returnTo = trigger;
     trigger = null;
     dialogImage.removeAttribute("src");
     caption.textContent = "";
+    if (returnTo.isConnected) returnTo.focus();
+  };
+  const closeLightbox = () => {
+    if (dialog.open) dialog.close();
+    restore();
+  };
+
+  closeButton.addEventListener("click", closeLightbox);
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeLightbox();
   });
+  dialog.addEventListener("close", restore);
 })();
