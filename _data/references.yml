@@ -1,0 +1,376 @@
+# Project references 2019-2026, rendered on /projects/ and summarised on the
+# homepage. Source: "Lörincz structural design reference 2023-2024-2025-2026"
+# (Word document, Nov 2026).
+#
+# Fields
+#   id        anchor on /projects/ and the image file prefix
+#   year      as given in the reference document
+#   sector    railway | industrial | buildings | hydraulic (drives the filter chips)
+#   client    as named in the reference document; omit when not stated
+#   images    file = images/references/<file>.webp (+ <file>-thumb.webp)
+#             src  = image number inside the Word file (word/media/imageN.png),
+#                    only used to regenerate the WebP files
+#   case_study  optional link to a blog case study on the same project
+#
+# Writing rules for this file: plain English, no dashes as sentence breaks,
+# facts from the reference document and its drawings only.
+
+- id: cologne-steel-trough-bridge
+  year: 2026
+  sector: railway
+  title: Steel trough bridge, 36 m span
+  location: Cologne
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Single-track railway bridge with a steel trough superstructure spanning 36 m.
+    The superstructure carries a 5 m high noise barrier and an escape walkway,
+    with a torsion beam along the trough edge, and rests on reinforced concrete
+    columns of 1.30 m diameter.
+  images:
+    - {file: cologne-steel-trough-bridge-1, src: 53, alt: "FE model of the steel trough superstructure with support reactions"}
+    - {file: cologne-steel-trough-bridge-2, src: 54, alt: "Cross-section of the steel trough bridge with noise barrier, escape walkway and concrete column"}
+    - {file: cologne-steel-trough-bridge-3, src: 55, alt: "General arrangement plan of the steel trough bridge"}
+
+- id: stuttgart-21-integral-crossing-structures
+  year: 2026
+  sector: railway
+  title: Integral crossing structures, Stuttgart 21
+  location: Stuttgart
+  services: [Structural analysis, Structural design]
+  summary: >-
+    Integral railway crossing structures for the Stuttgart 21 rail project.
+    Integral bridges have no bearings or expansion joints: the superstructure is
+    cast monolithically with the substructure, so restraint from temperature,
+    shrinkage and soil interaction has to be carried through the frame.
+  images:
+    - {file: stuttgart-21-integral-crossing-structures-1, src: 52, alt: "Longitudinal section and track plan of the integral crossing structures"}
+
+- id: eddersheim-pedestrian-overpass
+  year: 2026
+  sector: railway
+  title: Pedestrian overpass at Eddersheim station
+  location: Hattersheim-Eddersheim
+  client: DB
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Steel pedestrian overpass across the tracks at Eddersheim station. The main
+    span is a steel truss frame, reached by steel stair structures at both ends.
+  images:
+    - {file: eddersheim-pedestrian-overpass-1, src: 44, alt: "3D frame model of the steel truss overpass and stair structures"}
+    - {file: eddersheim-pedestrian-overpass-2, src: 45, alt: "Plan of the overpass showing truss frame and stair positions"}
+
+- id: geretshausen-pedestrian-overpass
+  year: 2026
+  sector: railway
+  title: Pedestrian overpass with lifts over four tracks
+  location: Geretshausen
+  services: [Structural design, Foundation design]
+  summary: >-
+    Pedestrian overpass spanning four tracks, with a prestressed concrete trough
+    as the walkway superstructure under a glazed steel frame and steel roof.
+    Access is by lift shafts and reinforced concrete stairs, all on deep
+    foundations.
+  images:
+    - {file: geretshausen-pedestrian-overpass-1, src: 47, alt: "Cross-section of the overpass above four tracks"}
+    - {file: geretshausen-pedestrian-overpass-2, src: 46, alt: "Position plan with trough, lifts, stairs and deep foundations"}
+
+- id: neustadt-filler-beam-bridges
+  year: 2026
+  sector: railway
+  title: Filler beam railway bridges (WiB)
+  location: Neustadt
+  client: DB
+  services: [Structural analysis, Structural design]
+  summary: >-
+    Railway bridges built as filler beam decks (Walzträger in Beton): rolled
+    steel beams encased in reinforced concrete. The system gives a shallow,
+    stiff deck for short spans where construction depth under the track is
+    limited.
+  images:
+    - {file: neustadt-filler-beam-bridges-1, src: 48, alt: "Cross-section of a filler beam railway deck with ballast bed and edge caps"}
+
+- id: bingen-platform-refurbishment
+  year: 2026
+  sector: railway
+  title: Platform refurbishment and underpass cover, Bingen station
+  location: Bingen am Rhein
+  client: DB
+  services: [Structural analysis, Refurbishment]
+  summary: >-
+    Structural work for the platform refurbishment at Bingen station, including
+    the cover over the pedestrian underpass beneath the platforms.
+  images:
+    - {file: bingen-platform-refurbishment-1, src: 49, alt: "North elevation of the refurbished platforms at Bingen station"}
+    - {file: bingen-platform-refurbishment-2, src: 50, alt: "Cross-sections through the platform and pedestrian underpass"}
+
+- id: industrial-pipe-racks-strengthening
+  year: 2024
+  sector: industrial
+  title: Pipe racks for pipeline construction
+  client: Triplan
+  services: [Structural analysis, Strengthening]
+  summary: >-
+    Check of steel pipe racks under new pipeline loads, using second-order frame
+    analysis. With local strengthening (an HEA 120 with a welded coped IPE 120
+    beneath it, and a welded-in HEA 100) the maximum utilisation of the steel
+    beams is 80 percent.
+  images:
+    - {file: industrial-pipe-racks-strengthening-1, src: 43, alt: "Frame analysis of the pipe rack showing the strengthened members"}
+
+- id: industrial-pipeline-bridge
+  year: 2024
+  sector: industrial
+  title: Industrial pipeline bridge
+  client: Triplan
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Steel pipe bridge carrying process pipelines between plant units, analysed
+    together with its foundations under pipe and operating loads.
+  images:
+    - {file: industrial-pipeline-bridge-1, src: 8, alt: "3D model of the pipe bridge with process pipelines"}
+    - {file: industrial-pipeline-bridge-2, src: 9, alt: "Analysis model of the pipe bridge steel frame"}
+
+- id: shell-industrial-bridge
+  year: 2024
+  sector: industrial
+  title: Industrial steel bridge for a Shell site
+  client: Triplan, for Shell
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Long steel bridge structure on an industrial site, with a portal frame at
+    one end and a series of frame supports along its length.
+  images:
+    - {file: shell-industrial-bridge-1, src: 11, alt: "Analysis model of the industrial steel bridge"}
+    - {file: shell-industrial-bridge-2, src: 10, alt: "Wireframe view of the bridge on its site slab"}
+
+- id: industrial-pipeline-secondary-steel
+  year: 2024
+  sector: industrial
+  title: Secondary steel structures for an industrial pipeline
+  client: Triplan
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Secondary steelwork supporting an industrial pipeline, with design of the
+    members and their connections.
+  images:
+    - {file: industrial-pipeline-secondary-steel-1, src: 22, alt: "Elevations of the secondary steel frames"}
+    - {file: industrial-pipeline-secondary-steel-2, src: 21, alt: "Steel frame elevation with connection details"}
+
+- id: chemical-plant-steel-hall-crane
+  year: 2024
+  sector: industrial
+  title: Chemical plant extension, steel hall with crane
+  client: Triplan
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Extension of a chemical plant with a steel hall carrying a crane system.
+    The frame uses HEA and IPE sections, with the crane loads taken into the
+    columns and foundations.
+  images:
+    - {file: chemical-plant-steel-hall-crane-1, src: 24, alt: "3D model of the steel hall frame with member sections"}
+    - {file: chemical-plant-steel-hall-crane-2, src: 23, alt: "Plan of the hall extension within the existing plant"}
+
+- id: hoechst-chemical-plant-reassessment
+  year: 2024
+  sector: industrial
+  title: Chemical plant reassessment and strengthening, Höchst
+  location: Frankfurt-Höchst
+  client: Triplan
+  services: [Reassessment, Strengthening, Monitoring]
+  summary: >-
+    Recalculation, strengthening and monitoring of a reinforced concrete
+    skeleton structure in a chemical plant, with structural analysis of both
+    the steel and the reinforced concrete parts.
+  images:
+    - {file: hoechst-chemical-plant-reassessment-1, src: 38, alt: "Section through the reinforced concrete skeleton structure of the plant"}
+
+- id: industrial-stair-towers
+  year: 2024
+  sector: industrial
+  title: Stair towers and stair structures
+  client: Triplan
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Structural analysis of steel stair towers and stair structures giving access
+    to industrial plant levels.
+  images:
+    - {file: industrial-stair-towers-1, src: 39, alt: "Elevations and plans of the steel stair towers"}
+
+- id: steel-silos-foundations
+  year: 2024
+  sector: industrial
+  title: Steel silos, foundation check and demolition analysis
+  client: Triplan
+  services: [Structural analysis, Foundation check, Demolition analysis]
+  summary: >-
+    Steel silos: check of the silo foundations, structural analysis for the
+    demolition stages, and a check of the fire water system.
+  images:
+    - {file: steel-silos-foundations-1, src: 42, alt: "Elevation of a steel silo with access ladder"}
+    - {file: steel-silos-foundations-2, src: 41, alt: "Load combinations and FE results for the silo foundation slab"}
+    - {file: steel-silos-foundations-3, src: 40, alt: "Plant layout with silo positions"}
+
+- id: chemical-plant-steel-chimneys
+  year: 2024
+  sector: industrial
+  title: Steel chimneys in a chemical plant
+  client: Triplan
+  services: [Structural analysis, Dynamic analysis]
+  summary: >-
+    Static and dynamic analysis of steel chimneys in a chemical plant.
+  images: []
+
+- id: vessel-supports
+  year: 2023
+  sector: industrial
+  title: Vessel support structure
+  client: Triplan
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Steel support structure for a process vessel, including the design of the
+    bolted base connections.
+  images:
+    - {file: vessel-supports-1, src: 37, alt: "Steel support model with a bolted connection detail"}
+    - {file: vessel-supports-2, src: 36, alt: "Vessel drawing with nozzle positions"}
+
+- id: munich-station-pedestrian-bridge
+  year: 2022
+  sector: railway
+  title: Steel pedestrian bridge over a Munich railway station
+  location: Munich
+  client: Hays, Vössing München
+  services: [Structural analysis, FEM model, Drawings]
+  summary: >-
+    Steel pedestrian bridge over the tracks of a Munich station, with lift
+    towers and stairs down to the platforms. Work covered the FEM structural
+    model, cross-sections and plan overviews.
+  images:
+    - {file: munich-station-pedestrian-bridge-1, src: 13, alt: "3D model of the station footbridge with lift towers and stairs"}
+    - {file: munich-station-pedestrian-bridge-2, src: 12, alt: "Plans, elevations and details of the pedestrian bridge"}
+
+- id: steel-trough-rail-bridge-60m
+  year: 2022
+  sector: railway
+  title: Steel trough rail bridge, 60 m long
+  client: Hays
+  services: [Structural analysis, Steel construction]
+  summary: >-
+    Steel trough railway bridge, 60 m long with a 50 m span. The trough is
+    5.90 m wide, and the analysis covered the superstructure and its abutments.
+  images:
+    - {file: steel-trough-rail-bridge-60m-1, src: 20, alt: "FE model of the 60 m steel trough bridge"}
+    - {file: steel-trough-rail-bridge-60m-2, src: 18, alt: "Cross-section of the steel trough, 5.90 m wide"}
+    - {file: steel-trough-rail-bridge-60m-3, src: 19, alt: "Section through the abutment and trough bridge"}
+
+- id: rail-trough-bridge-sofistik
+  year: 2022
+  sector: railway
+  title: Railway trough bridge
+  client: WSP
+  services: [Structural analysis, FEM model]
+  summary: >-
+    Railway trough bridge analysed with a 3D finite element model in SOFiSTiK,
+    with the deck shell and main girders modelled as plate elements.
+  images:
+    - {file: rail-trough-bridge-sofistik-1, src: 26, alt: "3D FE model of the trough bridge in SOFiSTiK"}
+    - {file: rail-trough-bridge-sofistik-2, src: 25, alt: "Plan view of the trough bridge and tracks"}
+
+- id: isar-composite-rail-bridge
+  year: 2022
+  sector: railway
+  title: Composite rail bridge over the Isar, 3 x 33 m
+  location: Bavaria
+  client: DB, Hays
+  services: [Structural design, Structural analysis]
+  summary: >-
+    Composite steel and concrete railway bridge over the river Isar, with three
+    spans of 33 m on intermediate piers.
+  case_study: /blog/composite-steel-concrete-rail-bridge/
+  images:
+    - {file: isar-composite-rail-bridge-1, src: 27, alt: "Elevation, sections and plan of the Isar bridge"}
+    - {file: isar-composite-rail-bridge-2, src: 30, alt: "FE model of the bridge deck and piers"}
+    - {file: isar-composite-rail-bridge-3, src: 29, alt: "3D reinforcement model of a bridge detail"}
+
+- id: prestressed-industrial-building
+  year: 2022
+  sector: buildings
+  title: Industrial building, prestressed concrete structure
+  location: Kelkheim
+  client: Architekt Schmitt
+  services: [Structural design, Foundation design]
+  summary: >-
+    Two-storey industrial building with a prestressed concrete frame on pad
+    foundations.
+  images:
+    - {file: prestressed-industrial-building-1, src: 15, alt: "3D model of the concrete frame"}
+    - {file: prestressed-industrial-building-2, src: 14, alt: "Foundation plan with pad foundations"}
+
+- id: precast-office-building
+  year: 2022
+  sector: buildings
+  title: Office building, precast concrete structure
+  location: Kelkheim
+  client: Architekt Schmitt
+  services: [Structural analysis, FEM model]
+  summary: >-
+    Office building with a precast concrete structure, analysed as a full 3D
+    shell model in SOFiSTiK.
+  images:
+    - {file: precast-office-building-1, src: 17, alt: "SOFiSTiK shell model of the office building"}
+    - {file: precast-office-building-2, src: 16, alt: "Section through the office building"}
+
+- id: steel-pedestrian-bridge-db-tracks
+  year: 2021
+  sector: railway
+  title: Steel pedestrian bridge over DB tracks
+  client: Hays, for DB
+  services: [Basic design, Detail design]
+  summary: >-
+    Steel truss pedestrian bridge over DB tracks with stair access, taken from
+    basic design through to detail design of the connections.
+  images:
+    - {file: steel-pedestrian-bridge-db-tracks-1, src: 7, alt: "3D model of the steel truss pedestrian bridge"}
+    - {file: steel-pedestrian-bridge-db-tracks-2, src: 6, alt: "Connection details from the detail design"}
+    - {file: steel-pedestrian-bridge-db-tracks-3, src: 4, alt: "Elevation of the stair tower and truss"}
+
+- id: rail-bridge-refurbishment-new-access
+  year: 2020
+  sector: railway
+  title: Rail bridge refurbishment with new access elements
+  client: DB
+  services: [Structural analysis, Refurbishment]
+  summary: >-
+    Refurbishment of an existing concrete rail bridge with new access elements
+    and a new edge cross-section: a steel edge cap with a recessed cable trough
+    fixed to the existing concrete cornice.
+  images:
+    - {file: rail-bridge-refurbishment-new-access-1, src: 2, alt: "Section through the new steel edge cap with recessed cable trough"}
+    - {file: rail-bridge-refurbishment-new-access-2, src: 3, alt: "Von Mises stress plot of the steel edge cap"}
+
+- id: avl-production-hall-stuttgart
+  year: 2020
+  sector: buildings
+  title: Production hall, Stuttgart
+  location: Stuttgart
+  client: Architekt Schmitt, AVL
+  services: [Structural design, Foundation design]
+  summary: >-
+    Concrete frame for a production hall, on pad foundations.
+  images:
+    - {file: avl-production-hall-stuttgart-1, src: 32, alt: "3D model of the production hall frame"}
+    - {file: avl-production-hall-stuttgart-2, src: 31, alt: "Foundation plan of the production hall"}
+
+- id: hochtief-port-gate
+  year: 2019
+  sector: hydraulic
+  title: Port gate, check of main components
+  client: Hochtief
+  services: [Structural analysis, FEM model]
+  summary: >-
+    Structural check of the main components of a steel port gate. Water pressure
+    on the gate rises to about 144 kN/m² at its lowest level and was applied to
+    plate models of the gate structure.
+  images:
+    - {file: hochtief-port-gate-1, src: 34, alt: "FE plate model of the port gate structure"}
+    - {file: hochtief-port-gate-2, src: 33, alt: "Load diagram with water pressure over the gate height"}
+    - {file: hochtief-port-gate-3, src: 35, alt: "FE model of a gate component with utilisation results"}

@@ -1,4 +1,4 @@
-# Jekyll configuration for lorinczengineering.com
+# Jekyll configuration for loerinczengineering.de
 #
 # GitHub Pages already ran Jekyll on this repo with defaults, so enabling it
 # properly adds no new build tooling. index.html, about.html and 404.html carry
@@ -7,10 +7,10 @@
 
 title: Loerincz Engineering
 description: >-
-  Independent structural engineering practice in Germany. Structural analysis,
-  structural design and static analysis documents for railway bridges, tunnels,
-  industrial and high-rise buildings.
-url: "https://lorinczengineering.com"
+  Structural engineering practice in Germany: structural analysis, design and
+  static calculations for railway bridges, steel and industrial plant
+  structures, and buildings.
+url: "https://loerinczengineering.de"
 baseurl: ""
 lang: en
 
@@ -43,5 +43,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - tools
   - README.md
   - .DS_Store
