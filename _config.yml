@@ -39,6 +39,14 @@ google_site_verification: ""
 # required. Left empty so no third-party script loads until you supply it.
 cloudflare_analytics_token: ""
 
+# Project references: /projects/ and its structured data list only entries up
+# to this year. Newer entries stay in _data/references.yml but are not
+# published, and their images are excluded below. To show them again, revert
+# the commit "Hide the 2026 project references" (it also restores the
+# homepage cards), or raise this year, delete the six images/references lines
+# under exclude, and update the titles that name the year range.
+references_until: 2024
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -46,3 +54,10 @@ exclude:
   - tools
   - README.md
   - .DS_Store
+  # Hidden 2026 project references (see references_until above).
+  - images/references/cologne-steel-trough-bridge
+  - images/references/stuttgart-21-integral-crossing-structures
+  - images/references/eddersheim-pedestrian-overpass
+  - images/references/geretshausen-pedestrian-overpass
+  - images/references/neustadt-filler-beam-bridges
+  - images/references/bingen-platform-refurbishment

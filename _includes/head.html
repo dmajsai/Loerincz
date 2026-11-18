@@ -111,7 +111,8 @@
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      {%- for reference in site.data.references %}
+      {%- assign references = site.data.references | where_exp: "reference", "reference.year <= site.references_until" %}
+      {%- for reference in references %}
       {%- assign reference_url = page_url | append: "#" | append: reference.id %}
       {%- assign first_image = reference.images | first %}
       {"@type": "ListItem", "position": {{ forloop.index }}, "item": {

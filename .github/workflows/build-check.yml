@@ -82,12 +82,15 @@ jobs:
         run: |
           set -e
           test -f _site/projects/index.html || { echo "no project references page"; exit 1; }
-          expected=$(grep -c '^- id:' _data/references.yml)
+          expected=$(ruby -ryaml -e 'until_year = YAML.load_file("_config.yml").fetch("references_until"); puts YAML.load_file("_data/references.yml").count { |r| r["year"] <= until_year }')
+          [ "$expected" -gt 0 ]
           actual=$(grep -o 'class="ref-item"' _site/projects/index.html | wc -l | tr -d ' ')
           echo "rendered references: $actual (expected $expected)"
           [ "$actual" -eq "$expected" ]
           python3 -c 'import json,pathlib,re; page=pathlib.Path("_site/projects/index.html").read_text(); blocks=re.findall(r"<script type=\"application/ld\+json\">(.*?)</script>", page, re.S); schemas=[json.loads(block) for block in blocks]; assert any(schema.get("@type")=="CollectionPage" for schema in schemas), "no valid CollectionPage JSON-LD"'
           python3 -c 'import pathlib,re,sys; pattern=re.compile(r"/?images/references/[^\"\x27\s)>]+\.webp"); missing=[]; pages=("_site/projects/index.html","_site/index.html"); paths=set(); [paths.update(pattern.findall(pathlib.Path(page).read_text())) for page in pages]; missing=[url for url in sorted(paths) if not (pathlib.Path("_site")/url.lstrip("/")).is_file()]; print("checked reference images:",len(paths)); print("missing reference images:",*missing,sep="\n"); sys.exit(bool(missing))'
+          # Hidden references: no reference image may be published unless a page links it.
+          python3 -c 'import pathlib,re,sys; pattern=re.compile(r"images/references/([^\"\x27\s)>/]+\.webp)"); linked=set(); [linked.update(pattern.findall(pathlib.Path(page).read_text())) for page in ("_site/projects/index.html","_site/index.html")]; published={path.name for path in pathlib.Path("_site/images/references").glob("*.webp")}; orphans=sorted(published-linked); print("published reference images:",len(published),"unlinked:",len(orphans)); print(*orphans,sep="\n"); sys.exit(bool(orphans))'
 
       - name: Upload built site
         uses: actions/upload-artifact@v4
