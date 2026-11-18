@@ -15,7 +15,7 @@ Swiss SIA standards.
 ## Pages
 
 - [Home](https://loerinczengineering.de/): Services overview, client list, and recent project case studies with per-project engineering detail.
-- [Project references 2019-2026](https://loerinczengineering.de/projects/): Every project from 2019 to 2026 with year, client, scope of work, and drawings or analysis models. Covers railway trough bridges, integral bridges, filler beam bridges, station overpasses, pipe racks, industrial steel structures, and concrete buildings.
+- [Project references 2019-2024](https://loerinczengineering.de/projects/): Every project from 2019 to 2024 with year, client, scope of work, and drawings or analysis models. Covers railway trough bridges, rail bridge refurbishment, station pedestrian bridges, pipe racks and pipe bridges, industrial steel structures, concrete buildings, and hydraulic steelwork.
 - [About](https://loerinczengineering.de/about.html): Education and qualifications, professional experience, independent practice, software proficiency, standards, and languages.
 - [Engineering case studies](https://loerinczengineering.de/blog/): Worked examples from our projects, covering how each structure was analysed, what governed the design, and the standards and software applied.
 - [Railway bridge engineering](https://loerinczengineering.de/blog/railway-bridges/): Case studies on railway bridge analysis, design and refurbishment for DB German Rail.
@@ -33,7 +33,7 @@ Swiss SIA standards.
 - Steel construction, including steel trough bridges and pedestrian bridges
 - Pipe bridges, pipe racks, stair towers, silos and chimneys for industrial plants
 - Reassessment, strengthening and monitoring of existing structures
-- Railway bridge design and refurbishment, including integral and filler beam (WiB) bridges
+- Railway bridge design and refurbishment
 - Tunnel and infrastructure structural planning, including construction pits, diaphragm walls, and pile walls
 - High-rise building static analysis and construction supervision
 - Standards: DIN EN 1990-1998 (Eurocodes), SIA
